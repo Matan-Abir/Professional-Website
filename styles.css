@@ -141,19 +141,30 @@ body::before {
     gap: 1rem;
   }
 
+  body {
+    background-attachment: scroll;
+  }
+
   .panel {
     width: 90%;
     max-width: 300px;
   }
 
   .github-gallery {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
   }
 
+  .github-gallery-container {
+    margin-bottom: 2rem;
+  }
+
   .repo-card {
     width: 90%;
-    max-width: 300px;
+    max-width: 200px;
+    min-width: 200px;
   }
+
+
 }
