@@ -10,48 +10,70 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
   </header>
 
   <main>
-    <section id="home">
-      <h1>Welcome to My Professional Website</h1>
-      <h2>My name is Matan Abir and welcome to Jackass</h2>
-    </section>
+    <div class="overlay"></div>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Briefly describe yourself, your background, and your professional experience.
-      </p>
-    </section>
+    <div class="panel-container">
+      <div class="panel left-panel">
+        <p class="outlined-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat tristique lectus, vitae fringilla dui tincidunt in.
+        </p>
+      </div>
+      <div class="panel right-panel">
+        <p class="outlined-text">
+          Curabitur tincidunt, dui vitae suscipit hendrerit, elit libero aliquam sem, nec ullamcorper eros nulla a nisl.
+        </p>
+      </div>
+    </div>
 
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <p>
-        Showcase your projects or relevant work experience here. You can use images, text, or links to external websites.
-      </p>
-    </section>
+    <div class="github-gallery-container">
+      <div id="github-gallery" class="github-gallery">
+        <!-- GitHub repos will be displayed here -->
+      </div>
+    </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Let people know how to get in touch with you. Include your email, phone number, or links to your social media profiles.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; Your Name - All rights reserved. | Website by <a href="https://example.com">Your Name</a></p>
-  </footer>
 
   <script src="scripts.js"></script>
+<script>
+  document.addEventListener("mousemove", (event) => {
+    const panels = document.querySelectorAll(".panel");
+    panels.forEach((panel) => {
+      const rect = panel.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / panel.clientWidth - 0.5;
+      const y = (event.clientY - rect.top) / panel.clientHeight - 0.5;
+      const shadowSize = 20; /* Increased shadowSize for faster movement */
+      panel.style.boxShadow = `${-x * shadowSize}px ${-y * shadowSize}px ${shadowSize}px rgba(0, 0, 0, 0.15)`;
+    });
+  });
+</script>
+<script>
+  // Replace 'your-github-username' with your actual GitHub username
+  const githubUsername = "Matan-Abir";
+
+  fetch(`https://api.github.com/users/${githubUsername}/repos`)
+    .then((response) => response.json())
+    .then((repos) => {
+      const githubGallery = document.getElementById("github-gallery");
+      repos.forEach((repo) => {
+        const repoCard = document.createElement("div");
+        repoCard.className = "repo-card";
+        repoCard.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || "No description provided"}</p>
+          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+        `;
+        githubGallery.appendChild(repoCard);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching GitHub repos:", error);
+    });
+</script>
+
+
+
 </body>
 </html>

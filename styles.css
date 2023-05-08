@@ -1,0 +1,131 @@
+body {
+  background-image: linear-gradient(to bottom, #4A4A4A 80%, #4B0082);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 1000;
+  animation: fadeOut 1.5s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1) 80%);
+  z-index: -1;
+}
+
+.panel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.panel {
+  width: 300px; 
+  height: 200px;
+  background-color: #4A4A4A;
+  border-radius: 4px;
+  position: relative;
+  transition: box-shadow 0.1s ease;
+}
+
+.left-panel {
+  z-index: 1;
+}
+
+.right-panel {
+  z-index: 2;
+}
+
+
+.left-panel::before,
+.right-panel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Calibri&display=swap');
+
+.outlined-text {
+  font-family: 'Calibri', sans-serif;
+  font-size: 18px;
+  color: #63A9FF; /* Light blue color that matches the gray and purple color palette */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.github-gallery-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.github-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #4A4A4A;
+  padding: 1rem;
+  width: 300px;
+  min-height: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.repo-card h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #63A9FF;
+}
+
+.repo-card p {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.repo-card a {
+  font-size: 16px;
+  color: #9C27B0;
+  text-decoration: none;
+}
