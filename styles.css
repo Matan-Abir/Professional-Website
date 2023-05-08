@@ -1,3 +1,5 @@
+/*Desktop CSS*/
+
 body {
   background-image: linear-gradient(to bottom, #4A4A4A 80%, #4B0082);
   background-repeat: no-repeat;
@@ -128,4 +130,30 @@ body::before {
   font-size: 16px;
   color: #9C27B0;
   text-decoration: none;
+}
+
+/* Mobile CSS */
+
+@media (max-width: 768px) {
+  .panel-container {
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+
+  .panel {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .github-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .repo-card {
+    width: 90%;
+    max-width: 300px;
+  }
 }
