@@ -1,3 +1,5 @@
+// Fix this HTML first
+
 document.querySelectorAll('.section-title').forEach(title => {
     title.addEventListener('click', () => {
         const content = title.nextElementSibling;
