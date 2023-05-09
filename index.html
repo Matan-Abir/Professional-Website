@@ -11,42 +11,52 @@
 </head>
 
 <body>
-  <header>
+  <div class="triangle" id="triangle-top-left"></div>
+  <div class="triangle" id="triangle-bottom-right"></div>
+  <img id="sunrise" src="Leonardo_Diffusion_Stylized_and_minimalistic_sunrise_Transpare_1-modified.png" alt="Sunrise">
 
+  <header class="content-wrapper">
+    <div>
+      <h1 class="name">Matan Abir</h1>
+      <div class="contact-info">
+        <p>Email: matan.abir@gmail.com</p>
+        <p>LinkedIn: https://www.linkedin.com/in/matan-abir/</p>
+      </div>
+    </div>
+    <p class="description">Aspiring israeli-based developer with a year's worth of experience</p>
   </header>
 
-  <main>
-    <div class="overlay"></div>
+  <main class="main-content">
 
-    <div class="panel-container">
-      <div class="panel left-panel">
-        <p class="outlined-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat tristique lectus, vitae fringilla dui
-          tincidunt in.
-        </p>
+    <div class="sections">
+      <div class="section">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="section-content">
+          <!-- Work Experience details go here -->
+        </div>
       </div>
-      <div class="panel right-panel">
-        <p class="outlined-text">
-          Curabitur tincidunt, dui vitae suscipit hendrerit, elit libero aliquam sem, nec ullamcorper eros nulla a nisl.
-        </p>
+      <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="section-content">
+          <!-- Education details go here -->
+        </div>
+      </div>
+      <div class="section">
+        <h2 class="section-title">Flavor</h2>
+        <div class="section-content">
+          <!-- Flavor details go here -->
+        </div>
       </div>
     </div>
 
     <div class="github-gallery-container">
       <div id="github-gallery" class="github-gallery">
         <!-- GitHub repos will be displayed here -->
-
-        <div class="repo-card">
-          <h3>Fictional Repo</h3>
-          <p>A fictional GitHub repository for testing purposes.</p>
-          <a href="#" onclick="return false;">View on GitHub</a>
-        </div>
       </div>
     </div>
+  </main>
 
-
-    <script src="scripts.js"></script>
-    
+  <script src="scripts.js"></script>
 </body>
 
 </html>

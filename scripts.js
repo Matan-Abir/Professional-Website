@@ -1,21 +1,10 @@
-// Shadow effect
-function isMobile() {
-    return window.matchMedia("(max-width: 768px)").matches;
-}
-
-document.addEventListener("mousemove", (event) => {
-    // Only execute on non-mobile devices
-    if (!isMobile()) {
-        const panels = document.querySelectorAll(".panel");
-        panels.forEach((panel) => {
-            const rect = panel.getBoundingClientRect();
-            const x = (event.clientX - rect.left) / panel.clientWidth - 0.5;
-            const y = (event.clientY - rect.top) / panel.clientHeight - 0.5;
-            const shadowSize = 20;
-            panel.style.boxShadow = `${-x * shadowSize}px ${-y * shadowSize}px ${shadowSize}px rgba(0, 0, 0, 0.15)`;
-        });
-    }
+document.querySelectorAll('.section-title').forEach(title => {
+    title.addEventListener('click', () => {
+        const content = title.nextElementSibling;
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
 });
+
 
 // GitHub repos
 const githubUsername = "Matan-Abir";
