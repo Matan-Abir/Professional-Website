@@ -24,8 +24,9 @@ body {
     animation: slide-in 1s ease-in-out forwards;
 }
 
-header, .github-gallery-container {
-  animation: fade-in 1s ease-in-out forwards;
+header,
+.github-gallery-container {
+    animation: fade-in 1s ease-in-out forwards;
 }
 
 #triangle-top-left {
@@ -44,23 +45,43 @@ header, .github-gallery-container {
 
 header {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 1%;
+    width: 100%;
     position: absolute;
     top: 5%;
     color: #674188;
+    text-align: center;
 }
 
+
 header .name {
-    font-size: 3em;
+    font-size: 5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 
 header .description {
     text-align: right;
     font-size: 1.2em;
 }
+
+.contact-btn {
+    display: inline-block;
+    background-color: #674188;
+    color: #f7efe5;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #573177; /* darker version of #674188 */
+}
+
 
 #sunrise {
     position: absolute;
@@ -127,32 +148,119 @@ p {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
 .contact-info {
-  font-size: 1em;
-  margin-top: 0.5em;
+    font-size: 1em;
+    margin-top: 0.5em;
 }
 
-.sections {
-  width: 33%;
-  animation: fade-in 1s ease-in-out forwards;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+.main-top {
+    height: 33%;
+    min-height: 33%;
+}
+
+.main-middle {
+    height: 33%;
+    min-height: 33%;
+}
+
+.main-bottom {
+    height: 33%;
+    min-height: 33%;
+    align-self: center;
+    padding-top: 3%;
+}
+
+.main-middle-left {
+    width: 25%;
+    min-width: 25%;
+    padding-top: 1.5%;
+    border-radius: 5px;
+}
+
+.main-middle-center {
+    width: 33%;
+    min-width: 33%;
+}
+
+.main-middle-right {
+    width: 33%;
+    min-width: 33%;
 }
 
 .section {
-  display: none;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    animation: fade-in 1s ease-in-out forwards;
 }
 
-.section-title {
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  text-align: left;
+.section-btn {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    background-color: #f7efe5;
+    /* slightly grayish color */
+    color: #674188;
 }
 
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 0 18px;
+    color: #f7efe5;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0.5px 0.5px #674188;
+}
+
+.section-content::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(#674188, #f7efe5);
+    z-index: -1;
+    border-radius: inherit;
+    /* if your .section-content has border-radius, add this line */
+}
+
+.section-content.active::before {
+    bottom: -4px;
+    /* This line causes the bottom border to appear when the section is active */
+}
+
+.main-middle-left {
+    background: linear-gradient(#674188, #f7efe5);
+    padding: 2px;
+    /* This creates a border-like effect, adjust as necessary */
+    margin-left: 5%;
+}
+
+
+
+.section-btn.active {
+    border-bottom: none;
+}
+
+.repo-title {
+    font-size: 1.5em;
+    color: #674188;
+    margin-bottom: 1em;
+    text-align: center;
+}
 
 
 /* Animations */
