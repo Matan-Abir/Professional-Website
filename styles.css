@@ -1,199 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
-
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: #fffbf5;
+    background-color: #FFFBF5;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    color: #6741ff;
+    height: 100vh;
+    width: 100vw;
     position: relative;
-    overflow: hidden;
-    animation: fade-in 0.5s ease-in-out;
+    overflow-x: hidden;
 }
 
-.triangle {
-    position: absolute;
-    width: 50vw;
-    height: 50vh;
-    z-index: -10;
-    animation: slide-in 1s ease-in-out forwards;
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em 0;
+    /* This adds margin to the top and bottom of each row */
+    width: 90%;
+    /* This ensures the row takes 90% of the width of the viewport, leaving 5% on each side */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in total width */
+    padding: 0 1em;
+    /* Adds space between the content and the edge of the screen */
 }
+
+
+
+.github-gallery-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    /* Add some padding */
+}
+
+.github-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    gap: 2rem;
+    padding: 0 1rem;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.repo-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7EFE5;
+    color: #6741ff;
+    padding: 20px;
+    border:3px solid #6741ff;
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 5vw; /* Adjust according to your preference */
+    max-width: 350px; /* Adjust according to your preference */
+    min-height: 300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 
 header,
 .github-gallery-container {
     animation: fade-in 1s ease-in-out forwards;
 }
 
+.triangle {
+    position: fixed;
+    width: 50vw;
+    height: 50vh;
+    z-index: -1;
+}
+
 #triangle-top-left {
-    background-color: #f7efe5;
+    background-color: #F7EFE5;
     clip-path: polygon(0 0, 100% 0, 0 100%);
     left: 0;
     top: 0;
 }
 
 #triangle-bottom-right {
-    background-color: #f7efe5;
+    background-color: #F7EFE5;
     clip-path: polygon(100% 100%, 0 100%, 100% 0);
     right: 0;
     bottom: 0;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    top: 5%;
-    color: #674188;
-    text-align: center;
-}
-
-
-header .name {
-    font-size: 5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
-}
-
-header .description {
-    text-align: right;
-    font-size: 1.2em;
-}
-
-.contact-btn {
-    display: inline-block;
-    background-color: #674188;
-    color: #f7efe5;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.contact-btn:hover {
-    background-color: #573177; /* darker version of #674188 */
-}
-
-
-#sunrise {
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    /* Makes the image appear behind all other content */
-    max-width: 100%;
-    /* Ensures the image doesn't overflow the viewport */
-}
-
-
-.github-gallery-container {
-    width: 90%;
-    align-self: flex-end;
-    padding-bottom: 5%;
-    margin-top: auto;
-}
-
-.github-gallery {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-}
-
-.repo-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f7efe5;
-    padding: 1rem;
-    width: 300px;
-    min-height: 200px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #674188;
-    /* Outline with color from palette */
-}
-
-.repo-card h3 {
-    margin: 0;
-    font-size: 24px;
-    color: #674188;
-}
-
-.repo-card p {
-    font-size: 16px;
-    color: #674188;
-}
-
-.repo-card a {
-    font-size: 16px;
-    color: #c3acd0;
-    text-decoration: none;
-}
-
-h1,
-p {
+.sections {
+    position: relative;
     z-index: 1;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-.contact-info {
-    font-size: 1em;
-    margin-top: 0.5em;
-}
-
-.main-top {
-    height: 33%;
-    min-height: 33%;
-}
-
-.main-middle {
-    height: 33%;
-    min-height: 33%;
-}
-
-.main-bottom {
-    height: 33%;
-    min-height: 33%;
-    align-self: center;
-    padding-top: 3%;
-}
-
-.main-middle-left {
-    width: 25%;
-    min-width: 25%;
-    padding-top: 1.5%;
-    border-radius: 5px;
-}
-
-.main-middle-center {
-    width: 33%;
-    min-width: 33%;
-}
-
-.main-middle-right {
-    width: 33%;
-    min-width: 33%;
+    padding: 10px; /* Adjust padding as necessary */
 }
 
 .section {
     background: none;
     border: none;
-    width: 100%;
+    width: 50%;
     text-align: left;
     outline: none;
     transition: 0.4s;
@@ -210,7 +127,8 @@ p {
     transition: 0.4s;
     background-color: #f7efe5;
     /* slightly grayish color */
-    color: #674188;
+    text-align: center;
+    color: #6741ff;
 }
 
 .section-content {
@@ -221,7 +139,33 @@ p {
     color: #f7efe5;
     position: relative;
     z-index: 1;
-    text-shadow: 0.5px 0.5px #674188;
+    text-shadow: 1px 1px #6741ff;
+}
+
+.sections::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    right: 0;
+    bottom: 0;
+    left: 25%;
+    background: linear-gradient(to bottom, #6741ff,#6741ff,#F7EFE5 );
+    z-index: -1;
+    border-radius: inherit; /* If your .sections element has border-radius, add this line */
+    width:50%;
+    border-radius: 5px;
+}
+
+.sections::after {
+    content: "";
+    position: absolute;
+    top: 10px; /* Adjust border size as necessary */
+    right: 10px; /* Adjust border size as necessary */
+    bottom: 10px; /* Adjust border size as necessary */
+    left: 10px; /* Adjust border size as necessary */
+    background: F7EFE5; /* Or whatever the background color is */
+    z-index: -1;
+    border-radius: inherit; /* If your .sections element has border-radius, add this line */
 }
 
 .section-content::before {
@@ -231,56 +175,53 @@ p {
     bottom: -2px;
     left: -2px;
     right: -2px;
-    background: linear-gradient(#674188, #f7efe5);
+    background: linear-gradient(#6741ff, #6741ff, #6741ff, #6741ff, #f7efe5);
     z-index: -1;
     border-radius: inherit;
     /* if your .section-content has border-radius, add this line */
 }
 
-.section-content.active::before {
-    bottom: -4px;
-    /* This line causes the bottom border to appear when the section is active */
+#scrollable {
+    max-width: 10%;
+    max-height: 10%;
+    display: none;
 }
 
-.main-middle-left {
-    background: linear-gradient(#674188, #f7efe5);
-    padding: 2px;
-    /* This creates a border-like effect, adjust as necessary */
-    margin-left: 5%;
-}
+/* Screen Styles */
+@media screen and (max-width: 1800px) {
+    .github-gallery {
+        justify-content: flex-start;
+    }
+  }
 
-
-
-.section-btn.active {
-    border-bottom: none;
-}
-
-.repo-title {
-    font-size: 1.5em;
-    color: #674188;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-
-/* Animations */
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
+  /* CSS for devices with a max width of 768px - usually tablets and mobile devices */
+  @media only screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Add padding to the body to prevent cutting off elements */
+        overflow-x: hidden;
     }
 
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in {
-    0% {
-        transform: translateX(-100%);
+    .row {
+        width: 90vw; /* Adjust the width of the rows to fit the screen */
+        padding: 0 10px; /* Add padding to the rows */
+        overflow-x: hidden;
     }
 
-    100% {
-        transform: translateX(0);
+    .section {
+        width: 100%; /* Adjust the width of the sections to fit the screen */
+    }
+
+    .github-gallery {
+        padding: 0; /* Remove the padding from the gallery */
+        overflow-x: auto;
+    }
+
+    .repo-card {
+        min-width: 100%; /* Adjust the width of the cards to fit the screen */
+        max-width: 100%; /* Adjust the width of the cards to fit the screen */
+    }
+
+    #scrollable {
+        display:initial;
     }
 }

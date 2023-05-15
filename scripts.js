@@ -20,7 +20,7 @@ fetch(`https://api.github.com/users/${githubUsername}/repos`)
         console.error("Error fetching GitHub repos:", error);
     });
 
-
+    
 // Tabs
 let acc = document.getElementsByClassName("section-btn");
 let i;

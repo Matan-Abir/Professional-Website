@@ -2,103 +2,108 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Matan Abir's professional website">
-  <meta name="author" content="Matan Abir">
-  <title>Matan Abir's Website</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matan Abir's professional website">
+    <meta name="author" content="Matan Abir">
+    <title>Matan Abir's Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <svg width="0" height="0">
-    <linearGradient id="Gradient" gradientTransform="rotate(90)">
-      <stop offset="0%" stop-color="#f7efe5" />
-      <stop offset="100%" stop-color="#674188" />
-    </linearGradient>
-  </svg>
+    <div class="triangle" id="triangle-top-left"></div>
+    <div class="triangle" id="triangle-bottom-right"></div>
 
-  <div class="triangle" id="triangle-top-left"></div>
-  <div class="triangle" id="triangle-bottom-right"></div>
-  <img id="sunrise" src="Leonardo_Diffusion_Stylized_and_minimalistic_sunrise.png" alt="Sunrise">
+    <main class="main-content">
 
-  <header class="content-wrapper">
-    <div>
-      <h1 class="name">Hi, I am Matan Abir!</h1>
-      <div class="contact-info">
-        <a href="mailto:matan.abir@gmail.com" class="contact-btn">Email</a>
-        <a href="https://www.linkedin.com/in/matan-abir/" class="contact-btn">LinkedIn</a>
-    </div>
-    </div>
-    <p class="description">Aspiring israel-based developer with a year's worth of experience</p>
-  </header>
-
-  <main class="main-content">
-    <div class="main-top">
-      <!-- top third of the page. best not to touch too much -->
-    </div>
-    <div class="main-middle">
-      <div class="main-middle-left">
-        <div class="section">
-          <button class="section-btn active" id="work-btn">Work Experience</button>
-          <div class="section-content active" id="work-experience-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.</p>
-          </div>
-
+        <div class="row about-me">
+            <h1 class="name">Hi, I am Matan Abir!</h1>
+            <div class="contact-info">
+                <a href="mailto:matan.abir@gmail.com" class="contact-btn">Email</a>
+                <a href="https://www.linkedin.com/in/matan-abir/" class="contact-btn">LinkedIn</a>
+            </div>
+            <p class="description">Aspiring Israel-based developer</p>
         </div>
 
-        <div class="section">
-          <button class="section-btn">Education</button>
-          <div class="section-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          </div>
+        <div class="row">
+            <img id="sunrise" src="Leonardo_Diffusion_Stylized_and_minimalistic_sunrise.png" alt="Sunrise">
         </div>
 
-        <div class="section section-last">
-          <button class="section-btn">Flavor</button>
-          <div class="section-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.</p>
-          </div>
+        <div class="row sections">
+            <div class="section">
+                <button class="section-btn active" id="work-btn">Work Experience</button>
+                <div class="section-content active" id="work-experience-content">
+                    <p><b>2017-2018</b> : Software Developer at <b><u>Codeo LTD</u></b>. The company built websites and
+                        apps for
+                        clients on a contractor basis,
+                        and during my role there I've worked as fullstack engineer. In one project I worked both
+                        front-end and
+                        back-end
+                        using C#, MSSQL, HTML, CSS, JS while using the MVC framework, and during production was in full
+                        contact
+                        with clients,
+                        dynamically fulfilling emergent needs and adding new features. In another I was primarily an
+                        API-developer.
+                    </p>
+                    <p>
+                        <b>Independant Experience</b>: I've worked on several things outside of my "formal work".
+                        Several of these
+                        projects you can
+                        see under the "My Github Repositories" section. <b><u>This website</u></b> is one thing, being
+                        coded from
+                        the ground-up without
+                        a platform such as Wordpress or Wix.<b><u>Others:</u></b> I've also worked on:
+                    <ul>
+                        <li>a discord.js chatbot running in Node.js which performs web-scraping and notifies users who
+                            subscribe
+                            to it whenever the target website updates</li>
+                        <li>demo for a martial arts game I was trying to make. Has a random procedurally-generated
+                            world. Github
+                            repository is <b><u>Martial Heroes and Unorthodox Sects</u></b></li>
+                    </ul>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <button class="section-btn">Education</button>
+                <div class="section-content">
+                    <p><b>2015-2017</b> : I studied software engineering at the National Practical Software Engineering
+                        School
+                        in the Technion. I graduated with honors, with a grade average of 85.6. The finals project for
+                        which you
+                        can see in my "The-Underground-Tower" Github Repository. I studied C, ASM, C#, Java, Javascript,
+                        SQL as
+                        my main languages there, and overall it was my first introduction to programming, which I very
+                        much took
+                        to. I learned quickly enough that by the start of the second semester I was privately tutoring
+                        some of my
+                        own classmates, and in my second year the school itself asked me to give remedial lessons to my
+                        underclassmen.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section section-last">
+                <button class="section-btn">Flavor</button>
+                <div class="section-content">
+                    <p>asd</p>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="main-middle-center">
-
-      </div>
-      <div class="main-middle-right">
-
-      </div>
-
-    </div>
-    <div class="main-bottom">
-      <div class="github-gallery-container">
-        <h2 class="repo-title">My GitHub Repositories</h2>
-        <div id="github-gallery" class="github-gallery">
-          <!-- GitHub repos will be displayed here -->
+        <div class="row github-gallery-container">
+            <h2 class="repo-title">My GitHub Repositories</h2>
+            <img id="scrollable" src="scrollable.png">
+            <div id="github-gallery" class="github-gallery">
+                <!-- GitHub repos will be displayed here -->
+            </div>
         </div>
-      </div>
-    </div>
 
-  </main>
+    </main>
 
-  <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
