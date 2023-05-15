@@ -241,8 +241,8 @@ header,
     }
 
     .repo-card {
-        min-width: 100%; /* Adjust the width of the cards to fit the screen */
-        max-width: 100%; /* Adjust the width of the cards to fit the screen */
+        min-width: 50%; /* Adjust the width of the cards to fit the screen */
+        max-width: 75%; /* Adjust the width of the cards to fit the screen */
     }
 
     #scrollable {
