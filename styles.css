@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: #6741ff;
+    color: #674188;
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -62,9 +62,9 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #F7EFE5;
-    color: #6741ff;
+    color: #674188;
     padding: 20px;
-    border:3px solid #6741ff;
+    border:3px solid #674188;
     border-radius: 10px;
     margin: 10px;
     min-width: 5vw; /* Adjust according to your preference */
@@ -128,7 +128,7 @@ header,
     background-color: #f7efe5;
     /* slightly grayish color */
     text-align: center;
-    color: #6741ff;
+    color: #674188;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,7 +142,7 @@ header,
     color: #f7efe5;
     position: relative;
     z-index: 1;
-    text-shadow: 1px 1px #6741ff;
+    text-shadow: 1px 1px #674188;
 }
 
 .sections::before {
@@ -152,7 +152,7 @@ header,
     right: 0;
     bottom: 0;
     left: 25%;
-    background: linear-gradient(to bottom, #6741ff,#6741ff,#F7EFE5 );
+    background: linear-gradient(to bottom, #674188,#674188,#F7EFE5 );
     z-index: -1;
     border-radius: inherit; /* If your .sections element has border-radius, add this line */
     width:50%;
@@ -177,7 +177,7 @@ header,
     bottom: -2px;
     left: -2px;
     right: -2px;
-    background: linear-gradient(#6741ff, #6741ff, #6741ff, #6741ff, #f7efe5);
+    background: linear-gradient(#674188, #674188, #674188, #674188, #f7efe5);
     z-index: -1;
     border-radius: inherit;
     /* if your .section-content has border-radius, add this line */
@@ -195,7 +195,7 @@ header,
     margin-left: 10px;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-left: 12px solid #6741ff;
+    border-left: 12px solid #674188;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -256,6 +256,6 @@ header,
     }
 
     .top-section {
-        border-top:#6741ff 3px solid;
+        border-top:#674188 3px solid;
     }
 }
